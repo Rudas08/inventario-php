@@ -1,5 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
 body {
-    font-family: Arial;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #94a3b8;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: white;
+}
+
+textarea {
+    resize: none;
+    height: 45px;
+}
+
+.btn {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+.tabla-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
     text-align: center;
-    margin-top: 50px;
+}
+
+th {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+tr:nth-child(even) {
+    background: #273449;
+}
+
+tr:hover {
+    background: #334155;
+}
+
+.eliminar {
+    color: #f87171;
+    font-weight: bold;
+}
+
+.eliminar:hover {
+    text-decoration: underline;
+}
+
+/* Responsive real */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.editar-btn {
+    background: #facc15;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
 }
